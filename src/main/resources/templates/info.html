@@ -1,23 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Informação sobre o Freelancer</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    </head>
+<html th:replace="~{base :: layout (~{::main})}">
     <body>
-        <nav class="navbar bg-primary" data-bs-theme="dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
-            </div>
-        </nav>
-        <main class="container">
+        <main>
             <h1>Detalhes do Freelancer</h1>
             <p>Nome: <span th:text="${freelancer.nome}"></span></p>
             <p>Telefone: <span th:text="${freelancer.telefone}"></span></p>
             <p>Endereço: <span th:text="${freelancer.endereco}"></span></p>
         </main>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     </body>
 </html>
