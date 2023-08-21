@@ -21,5 +21,10 @@ public class FreelancerController {
 		return modelAndView;
 	}
 
-
+	@GetMapping("/{id}")
+	public ModelAndView findById(@PathVariable Long id) {
+		ModelAndView modelAndView = new ModelAndView("info");
+		modelAndView.addObject("freelancer", freelancerRepository.findById(id).get());
+		return modelAndView;
+	}
 }

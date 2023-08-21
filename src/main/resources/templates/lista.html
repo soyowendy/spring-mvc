@@ -27,7 +27,9 @@
                 <tbody>
                 <tr th:each="freelancer: ${freelancers}">
                     <td scope="row" th:text="${freelancer.id}"></td>
-                    <td th:text="${freelancer.nome}"></td>
+                    <td>
+                        <a th:href="@{/freelancer/{id} (id=${freelancer.id})}" th:text="${freelancer.nome}"></a>
+                    </td>
                     <td th:text="${freelancer.telefone}"></td>
                     <td th:text="${freelancer.endereco}"></td>
                 </tr>
