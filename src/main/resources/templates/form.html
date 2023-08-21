@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Freelancer Formulário</title>
+    </head>
+    <body>
+        <h1>Cadastro de Freelancer</h1>
+        <form method="POST" th:object="${form}">
+            <label for="nome">Nome: </label>
+            <input id="nome" type="text" th:field="*{nome}"><br/>
+
+            <label for="telefone">Telefone: </label>
+            <input id="telefone" type="text" th:field="*{telefone}"><br/>
+
+            <label for="cpf">CPF: </label>
+            <input id="cpf" type="text" th:field="*{cpf}"><br/>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </body>
+</html>
